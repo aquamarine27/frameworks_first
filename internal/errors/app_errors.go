@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"mini-web-service-go/internal/requestid"
+	"frameworks_first/internal/requestid"
 )
 
 type AppError struct {

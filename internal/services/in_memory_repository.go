@@ -4,7 +4,7 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"mini-web-service-go/internal/domain"
+	"frameworks_first/internal/domain"
 )
 
 type InMemoryRepository struct {

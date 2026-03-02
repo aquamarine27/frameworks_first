@@ -6,7 +6,7 @@ import (
 	"encoding/hex"
 	"net/http"
 
-	"mini-web-service-go/internal/requestid"
+	"frameworks_first/internal/requestid"
 )
 
 func RequestIDMiddleware(next http.Handler) http.Handler {
