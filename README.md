@@ -3,7 +3,7 @@
 Хранит данные в памяти процесса, предоставляет REST API и конвейер обработки запросов.
 
 ## Архитектурная идея
-- **Конвейер middleware** (RequestID → Logging → Recovery → Performance) — каждый слой делает ровно одну вещь и не мешает остальным.  
+- **Конвейер middleware** (RequestID → Logging → Recovery → Performance). Слои никак не мешают друг-другу
 - **Единый формат ошибок** с `requestId` для трассировки в логах.  
 - **Валидация** прямо в обработчике создания (name не пустое, difficulty 1–5, description ≤ 500).  
 - **Хранение** в памяти с защитой от параллельных запросов (RWMutex + atomic).  
@@ -16,7 +16,9 @@ git clone https://github.com/aquamarine27/frameworks_first.git
 # 2. Перейти в директорию проекта
 cd frameworks_first
 
-# 3. Установить зависимости
+# 3. Инициализация проекта и установка зависимостей.
+go mod init your_project_name
+
 go mod tidy
 
 # 4. Запустить
